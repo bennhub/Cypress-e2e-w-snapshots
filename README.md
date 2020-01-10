@@ -14,7 +14,7 @@ Cypress Image snapshot commands
 
 Single test with snapshot report in terminal (using iTerm)
 ----------------------------------------------------
-npm run cy:run --  --spec "cypress/integration/Compass/Bundles_PLP_PDP.spec.js" --reporter cypress-image-snapshot/reporter
+npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js" --reporter cypress-image-snapshot/reporter
 
 Single test - update base image
 -------------------------------------
