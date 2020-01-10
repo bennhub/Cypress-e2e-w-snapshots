@@ -1,5 +1,11 @@
 # Cata_Automation_E2E
 
+Run Full Test Suite: npx cypress run
+
+Run single Test: npm run cy:run --  --spec "cypress/integration/Compass/Bundles_PLP_PDP.spec.js"
+
+Run Test via Visual Test Ruuner: npx cypress open
+
 Cypress Image snapshot commands
 
 Single test with snapshot report in terminal (using iTerm)
