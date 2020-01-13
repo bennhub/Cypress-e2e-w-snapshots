@@ -11,6 +11,8 @@ Run Test from Specific Folder: ```npm run cy:run --  --spec "cypress/integration
 Run Test via Visual Test Runner: ``` npx cypress open```
 
 
+
+
 Cypress Image snapshot commands
 ---------------------------------
 
@@ -21,6 +23,11 @@ Single test output any image diffs in Terminal (using iTerm)
 Single test - update base image
 -------------------------------------
 ```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js" --env updateSnapshots=true```
+
+Update base images in Specific Folder
+-------------------------------------
+
+Run Test from Specific Folder/ Update Base: ```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
 
 Single test - prevent test failures when an image diff does not pass.
 -------------------------------------
