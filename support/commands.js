@@ -24,13 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-//percy Import
-//import '@percy/cypress';
-
-//cypress Vis Reg 
-//const compareSnapshotCommand = require('cypress-visual-regression/dist/command');
- //compareSnapshotCommand();
-
 //Image Snapshot
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 addMatchImageSnapshotCommand({
