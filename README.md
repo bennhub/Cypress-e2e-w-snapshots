@@ -7,7 +7,7 @@ Install Cypress: https://docs.cypress.io/guides/getting-started/installing-cypre
 
 and Image Snapshot: https://www.npmjs.com/package/cypress-image-snapshot
 
-Once installed, clone repro then use the following commands to execute. Make sure to run with --env updateSnapshots=true first to add the base images.
+Once installed, clone repo then use the following commands to execute. Make sure to run with --env updateSnapshots=true first to add the base images.
 
 
 **Commands of Execution**
