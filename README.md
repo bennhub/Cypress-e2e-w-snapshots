@@ -1,4 +1,4 @@
-#Cata_Automation_E2E
+# Cata_Automation_E2E
 
 **To Run Install Cypress and Cypress Image Snapshot**
 Install Cypress: https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing
