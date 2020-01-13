@@ -8,7 +8,7 @@ Run single Test: ``` npm run cy:run --  --spec "cypress/integration/Compass/Bund
 
 Run Test from Specific Folder: ```npm run cy:run --  --spec "cypress/integration/FIFA/**/*"```
 
-Run Test via Visual Test Runer: ``` npx cypress open```
+Run Test via Visual Test Runner: ``` npx cypress open```
 
 
 Cypress Image snapshot commands
