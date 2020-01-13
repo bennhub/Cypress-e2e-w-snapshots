@@ -1,4 +1,4 @@
-describe('Pik', function() {
+describe('Pik PLP PDP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 

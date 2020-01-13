@@ -1,4 +1,4 @@
-describe('Pik Channels', function() {
+describe('Pik Channels FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 

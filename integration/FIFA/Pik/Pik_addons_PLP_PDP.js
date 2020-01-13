@@ -1,4 +1,4 @@
-describe('Pik Addons', function() {
+describe('Pik Addons FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual

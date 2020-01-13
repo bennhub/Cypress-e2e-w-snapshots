@@ -1,4 +1,4 @@
-describe('Optik Channels', function() {
+describe('Optik Channels FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 

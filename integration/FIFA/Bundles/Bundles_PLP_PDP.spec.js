@@ -1,4 +1,4 @@
-describe('Bundles_Compass', function() {
+describe('Bundles_FIFA', function() {
     it('Gets, types and visual tests', function() {
   
 Cypress.config('defaultCommandTimeout')

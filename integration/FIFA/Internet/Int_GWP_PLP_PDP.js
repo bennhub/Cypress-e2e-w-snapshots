@@ -1,4 +1,4 @@
-describe('Internet Plans', function() {
+describe('Internet GWP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual

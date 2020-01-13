@@ -1,4 +1,4 @@
-describe('Optik GWP', function() {
+describe('Optik GWP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual

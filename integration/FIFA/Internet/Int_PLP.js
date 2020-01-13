@@ -1,4 +1,4 @@
-describe('Internet Plans', function() {
+describe('Internet PLP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 

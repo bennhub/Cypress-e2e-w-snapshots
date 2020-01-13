@@ -1,4 +1,4 @@
-describe('Internet Plans', function() {
+describe('Optik PLP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 
