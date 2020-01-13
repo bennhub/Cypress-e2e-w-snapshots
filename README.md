@@ -1,7 +1,10 @@
 # Cata_Automation_E2E
 
 **To Run Install Cypress and Cypress Image Snapshot**
+----------------------------------------------------
+
 Install Cypress: https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing
+
 and Image Snapshot: https://www.npmjs.com/package/cypress-image-snapshot
 
 Once installed, clone repro then use the following commands to execute. Make sure to run with --env updateSnapshots=true first to add the base images.
