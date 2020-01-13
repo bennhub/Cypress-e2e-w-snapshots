@@ -6,7 +6,9 @@ Run Full Test Regression Updating all Base Images: npm run cy:run  --env updateS
 
 Run single Test: npm run cy:run --  --spec "cypress/integration/Compass/Bundles_PLP_PDP.spec.js"
 
-Run Test via Visual Test Ruuner: npx cypress open
+Run Test from Specific Folder: npm run cy:run --  --spec "cypress/integration/FIFA/**/*"
+
+Run Test via Visual Test Runer: npx cypress open
 
 
 Cypress Image snapshot commands
