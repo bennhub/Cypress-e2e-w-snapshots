@@ -1,11 +1,13 @@
-# To Run Install Cypress and Cypress Image Snapshot 
+#Cata_Automation_E2E
+
+**To Run Install Cypress and Cypress Image Snapshot**
 Install Cypress: https://docs.cypress.io/guides/getting-started/installing-cypress.html#Installing
 and Image Snapshot: https://www.npmjs.com/package/cypress-image-snapshot
 
 Once installed, clone repro then use the following commands to execute. Make sure to run with --env updateSnapshots=true first to add the base images.
 
 
-# Cata_Automation_E2E
+**Commands of Execution**
 
 Run Full Test Regression: ``` npx cypress run```
 
@@ -18,16 +20,13 @@ Run Test from Specific Folder: ```npm run cy:run --  --spec "cypress/integration
 Run Test via Visual Test Runner: ``` npx cypress open```
 
 
+# Cypress Image snapshot commands and combos
 
-
-Cypress Image snapshot commands
----------------------------------
-
-Single test output any image diffs in Terminal (using iTerm)
+**Single test output any image diffs in Terminal (using iTerm)**
 ----------------------------------------------------
 ```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js" --reporter cypress-image-snapshot/reporter```
 
-Single test - update base image
+**Single test - update base image**
 -------------------------------------
 ```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js" --env updateSnapshots=true```
 
