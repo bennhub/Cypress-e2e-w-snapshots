@@ -17,7 +17,7 @@ cy.contains('Check availability').click()
 //visit internet Addons PLP
 cy.visit('https://www.telus.com/en/shop/home/bundle/plans')
 
-
+//sets cookie to prevent purlple banner from appearing
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 

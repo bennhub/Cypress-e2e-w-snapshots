@@ -14,7 +14,7 @@ cy.contains('Check availability').click()
 .wait(7000) 
    
 //lands back on home page
-//Go to internet plans 
+//Go to optik plans 
 cy.get('[data-qa=button-optik]').click()
 .wait(2000)
 
