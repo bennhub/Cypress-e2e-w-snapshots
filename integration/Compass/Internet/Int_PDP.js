@@ -15,6 +15,10 @@ cy.contains('Check availability').click()
 //visit internet 150 2yr PDP
 cy.visit('https://www.telus.com/en/shop/home/product/internet-150-30')
 
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
 //Opens T & C section
 cy.contains('View terms and conditions').click()
          .wait(2000) 
@@ -38,6 +42,10 @@ cy.matchImageSnapshot("Int_150 NoTerm");
     
 //visit internet 75 2yr PDP
 cy.visit('https://www.telus.com/en/shop/home/product/internet-75')
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()

@@ -15,6 +15,10 @@ cy.contains('Check availability').click()
 //visit internet Addons PLP
 cy.visit('https://www.telus.com/en/shop/home/internet/addons')
 
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
 //Opens FAQ section
 //cy.contains('Frequently Asked Questions').click()
          //.wait(2000) 
@@ -29,6 +33,10 @@ cy.matchImageSnapshot("Int_Addon_PLP");
 
 //visit internet Addon Telus Boost PDP
 cy.visit('https://www.telus.com/en/shop/home/product/telus-boost-wi-fi-starter-pack')
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()

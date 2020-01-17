@@ -22,26 +22,15 @@ describe('Home', function() {
    
   //lands back on home page
   //Go to internet plans 
-  cy.get('[data-qa=button-internet]').compareSnapshot('just-button')
-  
+  cy.get('[data-qa=button-internet]').click()
+  .wait(2000)
 
-
-  
-
-  
-  
-  
-  
+  cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+  .wait(3000)
  
-    
-  
+  //cy.get('[style="position: absolute; z-index: 2000000004; width: 27px; height: 27px; background-color: transparent; border-width: 0px; border-color: rgb(51, 51, 51); border-style: solid; border-radius: 0px; display: block; left: 850px; bottom: 71px; cursor: pointer;"] > div > img').click();
 
 
-    
-
-        
-      
-     
   
     })
   })

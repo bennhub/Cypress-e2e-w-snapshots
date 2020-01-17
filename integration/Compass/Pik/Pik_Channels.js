@@ -16,7 +16,11 @@ cy.contains('Check availability').click()
 //lands back on home page
 //Go to Pik plans 
 cy.get('[data-qa=button-pik]').click()
-        .wait(2000)
+.wait(2000)
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Click on Themepack and channels tab
 cy.contains('Channels').click({force: true})

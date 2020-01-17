@@ -15,6 +15,10 @@ cy.contains('Check availability').click()
 //visit internet 150 2yr PDP
 cy.visit('https://www.telus.com/en/shop/home/pik/addons')
 
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
          .wait(2000) 
@@ -30,6 +34,10 @@ cy.matchImageSnapshot("Pik Addons PLP");
 
 //visit Pik Addon Apple TV 32gb
 cy.visit('https://www.telus.com/en/shop/home/product/apple-tv')
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens Details section
 cy.contains('Details').click()

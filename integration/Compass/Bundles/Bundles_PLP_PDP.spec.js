@@ -18,6 +18,10 @@ cy.contains('Check availability').click()
 cy.visit('https://www.telus.com/en/shop/home/bundle/plans')
 
 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
+
 //Opens T & C section
 cy.contains('View terms and conditions').click()
          //.wait(2000) 
@@ -35,15 +39,18 @@ cy.matchImageSnapshot("bundPLP");
 cy.get('.style__OfferGrid-sc-1ad47ew-1').matchImageSnapshot('just-grid')
 
 //visit Bundles Optik 7-1 + Int 150 PDP
-//cy.visit('https://www.telus.com/en/shop/home/product/optik-7plus1-int150?bundle')
+cy.visit('https://www.telus.com/en/shop/home/product/optik-7plus1-int150?bundle')
+
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens T & C section
-//cy.contains('View terms and conditions').click()
+cy.contains('View terms and conditions').click()
          //.wait(2000) 
 
 //snapshots page for comparison
 //cy.compareSnapshot("bundles PDP");
-//cy.matchImageSnapshot();
+ cy.matchImageSnapshot();
 //cy.percySnapshot("bundles PDP");
 
 
