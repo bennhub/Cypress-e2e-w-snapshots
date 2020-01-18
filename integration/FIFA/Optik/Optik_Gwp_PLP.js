@@ -15,6 +15,10 @@ cy.contains('Check availability').click()
 //visit internet 150 2yr PDP
 cy.visit('https://www.telus.com/en/shop/home/optik/gifts')
 
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
          .wait(2000) 
@@ -23,12 +27,14 @@ cy.contains('Frequently Asked Questions').click()
 cy.contains('View terms and conditions').click()
          .wait(2000) 
 //snapshots page for comparison
-//cy.compareSnapshot("Optik Gwp PLP");
 cy.matchImageSnapshot("Optik Gwp PLP");
-//cy.percySnapshot("Optik Gwp PLP");
 
 //visit internet GWP Visa PDP
 cy.visit('https://www.telus.com/en/shop/home/product/500-visa')
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
@@ -39,9 +45,8 @@ cy.contains('View terms and conditions').click()
          .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Optik Gwp Visa PDP");
 cy.matchImageSnapshot("Optik Gwp Visa PDP");
-//cy.percySnapshot("Optik Gwp Visa PDP");
+
 
 
 

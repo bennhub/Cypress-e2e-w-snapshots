@@ -16,7 +16,11 @@ cy.contains('Check availability').click()
 //lands back on home page
 //Go to HomePhone plans 
 cy.get('[data-qa=button-home-phone]').click()
-        .wait(4000)
+.wait(4000)
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
  
 // Should be on a new URL which includes '/home-phone/plans'
 cy.url().should('eq','https://order.fibre.telus.com/digital/select?LPDSID=13755022&RDRProduct=HP');

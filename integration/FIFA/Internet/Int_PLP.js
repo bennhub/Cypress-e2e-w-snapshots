@@ -16,19 +16,19 @@ cy.contains('Check availability').click()
 //lands back on home page
 //Go to internet plans 
 cy.get('[data-qa=button-internet]').click()
-        .wait(2000)
+.wait(2000)
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
 .wait(2000) 
 
-//await percySnapshot('Home page', { 
-        //percyCSS: `iframe { display: none; }` 
-      //});
-//snapshots page for comparison
-//cy.compareSnapshot("Int PLP");
+//snaps shots for visual comparison
 cy.matchImageSnapshot("Int PLP");
-//cy.percySnapshot("Int PLP");
+
 
 
 

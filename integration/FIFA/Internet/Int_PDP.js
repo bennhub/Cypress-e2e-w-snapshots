@@ -15,6 +15,10 @@ cy.contains('Check availability').click()
 //visit internet 750 2yr PDP
 cy.visit('https://www.telus.com/en/shop/home/product/internet-750-750')
 
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
 //Opens T & C section
 cy.contains('View terms and conditions').click()
          .wait(2000) 
@@ -26,7 +30,11 @@ cy.matchImageSnapshot("Int PDP");
 
 //go to internet 150 no-term PDP
 cy.contains('Switch to no term plan').click()
-         .wait(2000) 
+.wait(2000)
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
@@ -39,9 +47,13 @@ cy.matchImageSnapshot("Int_750 NoTerm");
 //visit internet 75 2yr PDP
 cy.visit('https://www.telus.com/en/shop/home/product/internet-25-25')
 
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
 //Opens T & C section
 cy.contains('View terms and conditions').click()
-         .wait(2000) 
+.wait(2000) 
 
 
 //snapshots page for comparison
@@ -50,7 +62,11 @@ cy.matchImageSnapshot("Int 25 2yr PDP");
 
 //go to internet 75 no-term PDP
 cy.contains('Switch to no term plan').click()
-         .wait(2000) 
+.wait(2000)
+
+//sets cookie so purple banner does not apppear 
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
         
  //Opens T & C section
 cy.contains('View terms and conditions').click()
