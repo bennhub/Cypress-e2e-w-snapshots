@@ -20,6 +20,7 @@ cy.get('[data-qa=button-optik]').click()
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+
 .wait(3000)
 
 //Click on Themepack and channels tab
