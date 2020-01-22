@@ -27,7 +27,6 @@ cy.contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Optik PLP");
 cy.matchImageSnapshot("Optik Essentials 2yr PLP");
 
 //visit Optik 4TP+1 Noterm PDP

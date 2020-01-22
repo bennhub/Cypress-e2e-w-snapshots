@@ -22,17 +22,12 @@ cy.get('[data-qa=button-optik]').click()
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
- 
-
 //Opens T & C section
 cy.contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Optik PLP");
 cy.matchImageSnapshot("Optik PLP");
-
-
 
 
 

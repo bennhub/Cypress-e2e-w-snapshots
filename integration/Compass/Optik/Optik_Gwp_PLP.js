@@ -23,13 +23,13 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 cy.contains('Frequently Asked Questions').click()
          .wait(2000) 
 
-//Opens T &C section
+//Opens T & C section
 cy.contains('View terms and conditions').click()
          .wait(2000) 
+
 //snapshots page for comparison
-//cy.compareSnapshot("Optik Gwp PLP");
 cy.matchImageSnapshot("Optik Gwp PLP");
-//cy.percySnapshot("Optik Gwp PLP");
+
 
 //visit internet GWP Visa PDP
 cy.visit('https://www.telus.com/en/shop/home/product/500-visa')
@@ -47,9 +47,7 @@ cy.contains('View terms and conditions').click()
          .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Optik Gwp Visa PDP");
 cy.matchImageSnapshot("Optik Gwp Visa PDP");
-//cy.percySnapshot("Optik Gwp Visa PDP");
 
 
 

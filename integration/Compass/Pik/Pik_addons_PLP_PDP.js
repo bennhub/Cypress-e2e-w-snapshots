@@ -28,7 +28,6 @@ cy.contains('View terms and conditions').click()
          .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Pik Addons PLP");
 cy.matchImageSnapshot("Pik Addons PLP");
 
 
@@ -41,22 +40,21 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
 //Opens Details section
 cy.contains('Details').click()
-         .wait(2000)
+.wait(2000)
 
 //Opens Whats in the box
 cy.contains("What’s in the box").click()
-         .wait(2000) 
+.wait(2000) 
 
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
-         .wait(2000)
+.wait(2000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
-         .wait(2000) 
+.wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Pik Addons Apple TV");
 cy.matchImageSnapshot("Pik Addons Apple TV");
 
 

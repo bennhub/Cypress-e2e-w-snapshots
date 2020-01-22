@@ -11,7 +11,7 @@ cy.get('#autocomplete-form-address-google')
         .type(Cypress.env('address_150'))
   
 cy.contains('Check availability').click()
-         .wait(7000) 
+.wait(7000) 
    
 //lands back on home page
 //Go to Pik plans 
@@ -24,7 +24,7 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
  
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
-         .wait(2000)
+.wait(2000)
         
 
 //Opens T & C section
@@ -32,7 +32,6 @@ cy.contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Pik PLP");
 cy.matchImageSnapshot("Pik PLP");
 
 
@@ -46,19 +45,19 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
 //Opens Details section
 cy.contains('Details').click()
-         .wait(2000)
+.wait(2000)
 
 //Opens channels section
 cy.contains('The basic channels').click()
-         .wait(2000)         
+.wait(2000)         
 
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
-         .wait(2000)
+.wait(2000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
-         .wait(2000) 
+.wait(2000) 
 
 //snapshots page for comparison
 //cy.compareSnapshot("Basics+5 PDP");
@@ -74,21 +73,21 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
 //Opens Details section
 cy.contains('Details').click()
-         .wait(2000)
+.wait(2000)
 
 //Opens channels section
 cy.contains('The basic channels').click()
-         .wait(2000)         
+.wait(2000)         
 
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
-         .wait(2000)
+.wait(2000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
-         .wait(2000) 
+.wait(2000) 
+
 //snapshots page for comparison
-//cy.compareSnapshot("Basics+Crave PDP");
 cy.matchImageSnapshot("Basics+Crave PDP");
 
 

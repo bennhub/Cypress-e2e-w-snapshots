@@ -11,7 +11,7 @@ cy.get('#autocomplete-form-address-google')
         .type(Cypress.env('address_150'))
   
 cy.contains('Check availability').click()
-         .wait(7000) 
+.wait(7000) 
    
 //lands back on home page
 //Go to Optik plans 
@@ -20,12 +20,11 @@ cy.get('[data-qa=button-optik]').click()
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-
 .wait(3000)
 
 //Click on Themepack and channels tab
 cy.contains('Theme packs and channels').click()
-        .wait(7000) 
+.wait(7000) 
 
 //Opens FAQ
 cy.contains('Frequently Asked Questions').click()
@@ -36,7 +35,6 @@ cy.contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Optik Channels");
 cy.matchImageSnapshot("Optik Channels");
 
 
