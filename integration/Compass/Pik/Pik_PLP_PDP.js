@@ -53,14 +53,13 @@ cy.contains('The basic channels').click()
 
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
-.wait(2000)
+.wait(3000)
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Basics+5 PDP");
 cy.matchImageSnapshot("Basics+5 PDP");
 
 //visit basics + crave PDP
@@ -77,7 +76,7 @@ cy.contains('Details').click()
 
 //Opens channels section
 cy.contains('The basic channels').click()
-.wait(2000)         
+.wait(3000)         
 
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()

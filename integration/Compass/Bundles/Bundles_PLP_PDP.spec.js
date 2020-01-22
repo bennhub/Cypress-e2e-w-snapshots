@@ -14,8 +14,10 @@ cy.get('#autocomplete-form-address-google')
 cy.contains('Check availability').click()
          .wait(7000) 
    
-//visit internet Addons PLP
-cy.visit('/bundle/plans')
+//visit Bundles plans page
+cy.get('[data-qa=button-bundle]').click()
+.wait(2000)
+
 
 //sets cookie to prevent purlple banner from appearing
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )

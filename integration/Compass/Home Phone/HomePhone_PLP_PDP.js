@@ -3,7 +3,7 @@ describe('Home Phone', function() {
 
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -33,7 +33,7 @@ cy.matchImageSnapshot("Homephone PLP");
 
 
 //visit Home Phone Lite
-cy.visit('https://www.telus.com/en/shop/home/product/home-phone-lite')
+cy.visit('/product/home-phone-lite')
 
 
 //sets cookie so purple banner does not apppear 
@@ -55,7 +55,7 @@ cy.matchImageSnapshot("HomePhoneLite PDP");
 
 
 //visit basics + crave PDP
-cy.visit('https://www.telus.com/en/shop/home/product/home-phone')
+cy.visit('/product/home-phone')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
@@ -72,7 +72,6 @@ cy.contains('View terms and conditions').click()
 
 
 //snapshots page for comparison
-//cy.compareSnapshot("Homephone PDP");
 cy.matchImageSnapshot("Homephone PDP");
 
 
