@@ -11,19 +11,7 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-// In cypress/plugins/index.js
-//let percyHealthCheck = require('@percy/cypress/task')
 
-//module.exports = (on, config) => {
-  //on("task", percyHealthCheck);
-//};
-
-//visual reggression snapshot
-//const getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
- 
-//module.exports = (on) => {
-  //getCompareSnapshotsPlugin(on);
-//};
 
 
                                
@@ -35,4 +23,5 @@ const {
 module.exports = (on, config) => {
   addMatchImageSnapshotPlugin(on, config);
 };
+
 

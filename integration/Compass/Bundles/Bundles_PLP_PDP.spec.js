@@ -1,7 +1,6 @@
 describe('Bundles_Compass', function() {
     it('Gets, types and visual tests', function() {
-  
-Cypress.config('defaultCommandTimeout')
+
 
 //Visits Home and begins to qual
 cy.visit('/')
@@ -48,8 +47,6 @@ cy.contains('View terms and conditions').click()
 
 //snapshots page for comparison
  cy.matchImageSnapshot("bundle 7+1+Int150 PDP");
-
-
 
 
 
