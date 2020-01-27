@@ -28,3 +28,23 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   })
 
   
+
+// promisified fs module 
+const path = require('path'); 
+const fs = require('fs-extra'); 
+
+function getConfigurationByFile(file) { 
+  const pathToConfigFile = path.resolve( 
+    'cypress/config', 
+    `cypress.${file}.json` 
+  ); 
+
+  return fs.readJson(pathToConfigFile); 
+} 
+
+module.exports = (on, config) => { 
+  // accept a configFile value or use local by default 
+  const file = config.env.configFile || 'local'; 
+
+  return getConfigurationByFile(file); 
+}; 
