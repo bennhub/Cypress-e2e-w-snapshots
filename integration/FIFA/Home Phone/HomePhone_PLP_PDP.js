@@ -3,7 +3,7 @@ describe('Home Phone FIFA', function() {
 
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -22,12 +22,35 @@ cy.get('[data-qa=button-home-phone]').click()
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
  
-// Should be on a new URL which includes '/home-phone/plans'
-cy.url().should('eq','https://order.fibre.telus.com/digital/select?LPDSID=13755022&RDRProduct=HP');
+//snapshots page for comparison
+cy.matchImageSnapshot("HomePhone_PLP_FIFA");
+
+//*******Bundles pik-tv-and-internet-150
+cy.visit('/product/home-phone-lite')
+
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
+//Opens T & C section
+cy.contains('View terms and conditions').click()
+.wait(2000) 
 
 //snapshots page for comparison
-//cy.matchImageSnapshot("HomePhoneFIFA");
+cy.matchImageSnapshot("HomePhoneLite_PDP_FIFA");
 
+
+//*******Bundles essentials-int15-500-visa
+cy.visit('/product/home-phone')
+
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
+//Opens T & C section
+cy.contains('View terms and conditions').click()
+.wait(2000) 
+
+//snapshots page for comparison
+cy.matchImageSnapshot("HomePhone_PDP_FIFA");
 
 
     })
