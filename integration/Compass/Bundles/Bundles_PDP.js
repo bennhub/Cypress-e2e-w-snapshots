@@ -12,6 +12,10 @@ cy.get('#autocomplete-form-address-google')
   
 cy.contains('Check availability').click()
          .wait(7000) 
+
+//visit Bundles plans page
+cy.get('[data-qa=button-bundle]').click()
+.wait(2000)        
    
 //Bundle PDP Compass Qual
 
