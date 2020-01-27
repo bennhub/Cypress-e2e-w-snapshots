@@ -76,7 +76,7 @@ cy.matchImageSnapshot("essentials-int75 PDP");
 
 
 //*******Bundles optik-4plus1-int75-home-phone-lite
-cy.visit('/product/essentials-int75?bundleproduct/optik-4plus1-int75-home-phone-lite?bundle')
+cy.visit('/product/optik-4plus1-int75-home-phone-lite?bundle')
 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
