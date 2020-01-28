@@ -2,7 +2,7 @@ describe('Pik Addons', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -13,7 +13,7 @@ cy.contains('Check availability').click()
          .wait(7000) 
    
 //visit internet 150 2yr PDP
-cy.visit('https://www.telus.com/en/shop/home/pik/addons')
+cy.visit('/pik/addons')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
@@ -32,7 +32,7 @@ cy.matchImageSnapshot("Pik Addons PLP");
 
 
 //visit Pik Addon Apple TV 32gb
-cy.visit('https://www.telus.com/en/shop/home/product/apple-tv')
+cy.visit('/product/apple-tv')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )

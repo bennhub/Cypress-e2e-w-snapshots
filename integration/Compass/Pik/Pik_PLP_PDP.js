@@ -3,7 +3,7 @@ describe('Pik', function() {
 
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -36,7 +36,7 @@ cy.matchImageSnapshot("Pik PLP");
 
 
 //visit basics + pik 5 PDP
-cy.visit('https://www.telus.com/en/shop/home/product/the-basics-pik-5-tvx')
+cy.visit('/product/the-basics-pik-5-tvx')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
@@ -63,7 +63,7 @@ cy.contains('View terms and conditions').click()
 cy.matchImageSnapshot("Basics+5 PDP");
 
 //visit basics + crave PDP
-cy.visit('https://www.telus.com/en/shop/home/product/the-basics-crave-tvx')
+cy.visit('/product/the-basics-crave-tvx')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )

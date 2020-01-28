@@ -3,7 +3,7 @@ describe('Optik Plans PDP', function() {
 
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -15,7 +15,7 @@ cy.contains('Check availability').click()
    
 
 //visit Optik Essentials 2yr PDP Plans
-cy.visit('https://www.telus.com/en/shop/home/product/essentials-mediaroomtv-hs2-0')
+cy.visit('/product/essentials-mediaroomtv-hs2-0')
 
 
 //sets cookie so purple banner does not apppear 
@@ -30,7 +30,7 @@ cy.contains('View terms and conditions').click()
 cy.matchImageSnapshot("Optik Essentials 2yr PLP");
 
 //visit Optik 4TP+1 Noterm PDP
-cy.visit('https://www.telus.com/en/shop/home/product/4-theme-packs-1-premium-mediaroomtv-hs2-0?variant=f5172855730be3ee2355fa783d37589f')
+cy.visit('/product/4-theme-packs-1-premium-mediaroomtv-hs2-0?variant=f5172855730be3ee2355fa783d37589f')
 
 
 //sets cookie so purple banner does not apppear 

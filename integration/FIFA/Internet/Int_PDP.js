@@ -2,7 +2,7 @@ describe('Internet PDP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -13,7 +13,7 @@ cy.contains('Check availability').click()
          .wait(7000) 
    
 //visit internet 750 2yr PDP
-cy.visit('https://www.telus.com/en/shop/home/product/internet-750-750')
+cy.visit('/product/internet-750-750')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
@@ -45,7 +45,7 @@ cy.matchImageSnapshot("Int_750 NoTerm");
 
     
 //visit internet 75 2yr PDP
-cy.visit('https://www.telus.com/en/shop/home/product/internet-25-25')
+cy.visit('/product/internet-25-25')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )

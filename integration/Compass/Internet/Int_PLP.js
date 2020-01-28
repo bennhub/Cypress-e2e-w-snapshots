@@ -3,7 +3,7 @@ describe('Internet Plans', function() {
 
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -26,13 +26,9 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 cy.contains('View terms and conditions').click()
 .wait(2000) 
 
-//await percySnapshot('Home page', { 
-        //percyCSS: `iframe { display: none; }` 
-      //});
 //snapshots page for comparison
-//cy.compareSnapshot("Int PLP");
 cy.matchImageSnapshot("Int PLP");
-//cy.percySnapshot("Int PLP");
+
 
 
 

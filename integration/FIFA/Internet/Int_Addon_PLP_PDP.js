@@ -2,7 +2,7 @@ describe('Internet Addons FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -13,7 +13,7 @@ cy.contains('Check availability').click()
          .wait(7000) 
    
 //visit internet Addons PLP
-cy.visit('https://www.telus.com/en/shop/home/internet/addons')
+cy.visit('/internet/addons')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
@@ -31,7 +31,7 @@ cy.contains('View terms and conditions').click()
 cy.matchImageSnapshot("Int_Addon_PLP");
 
 //visit internet Addon Telus Boost PDP
-cy.visit('https://www.telus.com/en/shop/home/product/telus-boost-wi-fi-starter-pack-easy-payment')
+cy.visit('/product/telus-boost-wi-fi-starter-pack-easy-payment')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
