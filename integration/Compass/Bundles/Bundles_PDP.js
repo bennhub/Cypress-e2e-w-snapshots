@@ -3,6 +3,7 @@ describe('Bundles_Compass', function() {
 
 
 //Visits Home and begins to qual
+
 cy.visit('/')
 cy.contains('Get started').click()
 
