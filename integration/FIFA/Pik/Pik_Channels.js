@@ -3,7 +3,7 @@ describe('Pik Channels FIFA', function() {
 
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address

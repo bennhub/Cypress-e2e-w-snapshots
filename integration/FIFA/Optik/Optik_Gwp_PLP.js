@@ -2,7 +2,7 @@ describe('Optik GWP FIFA', function() {
     it('Gets, types and visual tests', function() {
 
 //Visits Home and begins to qual
-cy.visit(Cypress.env('baseUrl'))
+cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -13,7 +13,7 @@ cy.contains('Check availability').click()
          .wait(7000) 
    
 //visit internet 150 2yr PDP
-cy.visit('https://www.telus.com/en/shop/home/optik/gifts')
+cy.visit('/optik/gifts')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
@@ -30,7 +30,7 @@ cy.contains('View terms and conditions').click()
 cy.matchImageSnapshot("Optik Gwp PLP");
 
 //visit internet GWP Visa PDP
-cy.visit('https://www.telus.com/en/shop/home/product/500-visa')
+cy.visit('/product/500-visa')
 
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
