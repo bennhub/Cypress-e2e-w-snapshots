@@ -22,9 +22,22 @@ cy.get('[data-qa=button-pik]').click()
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
-//Click on Themepack and channels tab
-cy.contains('Channels').click({force: true})
-.wait(7000) 
+   
+//visit pik channels
+cy.visit('/pik/channels')
+.wait(3000) 
+
+//Click on Language filter
+cy.contains('Language').click()
+.wait(2000) 
+// optik Language filter snap
+cy.get(':nth-child(1) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Language filter')
+
+//Click on category filters
+cy.contains('Category').click()
+.wait(2000) 
+// optik category filter snap
+cy.get(':nth-child(2) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Category filter')
 
 //Opens FAQ
 cy.contains('Frequently Asked Questions').click()
