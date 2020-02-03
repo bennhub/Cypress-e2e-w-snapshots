@@ -10,6 +10,15 @@ and Image Snapshot: https://www.npmjs.com/package/cypress-image-snapshot
 Once installed, clone repo then use the following commands to execute. Make sure to run with --env updateSnapshots=true first to add the base images.
 
 
+*** Top Commands
+```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env failOnSnapshotDiff=false```
+```npm run cy:run --  --spec "cypress/integration/Compass/**/*" --env failOnSnapshotDiff=false```
+
+```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
+```npm run cy:run --  --spec "cypress/integration/Compass/**/*" --env updateSnapshots=true```
+
+
+
 **Commands of Execution**
 
 Run Full Test Regression: ``` npx cypress run```
@@ -27,11 +36,11 @@ Run Test via Visual Test Runner: ``` npx cypress open```
 
 **Single test output any image diffs in Terminal (using iTerm)**
 ----------------------------------------------------
-```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js" --reporter cypress-image-snapshot/reporter```
+```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PDP.js" --reporter cypress-image-snapshot/reporter```
 
 **Single test - update base image**
 -------------------------------------
-```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js" --env updateSnapshots=true```
+```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP.js" --env updateSnapshots=true```
 
 Update base images in Specific Folder
 -------------------------------------
