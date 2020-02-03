@@ -13,9 +13,11 @@ Once installed, clone repo then use the following commands to execute. Make sure
 **Top Commands**
 
 ```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env failOnSnapshotDiff=false```
+
 ```npm run cy:run --  --spec "cypress/integration/Compass/**/*" --env failOnSnapshotDiff=false```
 
 ```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
+
 ```npm run cy:run --  --spec "cypress/integration/Compass/**/*" --env updateSnapshots=true```
 
 
