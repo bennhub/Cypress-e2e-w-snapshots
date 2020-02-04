@@ -17,7 +17,20 @@ cy.contains('Check availability').click()
 cy.get('[data-qa=button-bundle]').click()
 .wait(2000)        
    
-//Bundle PDP Compass Qual
+//Bundle PDP FIFA Qual
+
+//******Bundles Optik 7-1 + Int 150 PDP
+cy.visit('/product/optik-4plus1-gigabit?bundle')
+
+cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+.wait(3000)
+
+//Opens T & C section
+cy.contains('View terms and conditions').click()
+         //.wait(2000) 
+
+//snapshots page for comparison
+ cy.matchImageSnapshot("optik-4plus1-gigabit PDP");
 
 //******Bundles Optik 7-1 + Int 150 PDP
 cy.visit('/product/optik-7plus1-int150?bundle')
