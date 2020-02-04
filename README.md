@@ -58,29 +58,29 @@ Run Test via Visual Test Runner: ``` npm run cypress:open:ENV```
 # Cypress Image snapshot commands and combos
 
 **Single test output any image diffs in Terminal (using iTerm)**
-----------------------------------------------------
+
 ```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PDP.js" --reporter cypress-image-snapshot/reporter```
 
 **Single test - update base image**
--------------------------------------
+
 ```npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP.js" --env updateSnapshots=true```
 
-Update base images in Specific Folder
--------------------------------------
+**Update base images in Specific Folder**
+
 
 Run Test from Specific Folder/ Update Base: ```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
 
-Single test - prevent test failures when an image diff does not pass.
--------------------------------------
+**Single test - prevent test failures when an image diff does not pass**
+
 ```npm run cy:run --  --spec "cypress/integration/Bundles/Bundles_PLP_PDP.spec.js" --env failOnSnapshotDiff=false```
 
-Single test - quickly view all failing snapshots and their diffs.
--------------------------------------
+**Single test - quickly view all failing snapshots and their diffs**
+
 ```npm run cy:run --  --spec "cypress/integration/Bundles/Bundles_PLP_PDP.spec.js" --reporter cypress-image-snapshot/reporter --env failOnSnapshotDiff=false```
 
 
-MORE INFO:
------
+**MORE INFO:**
+
 Updating snapshots
 Run Cypress with ```--env updateSnapshots=true```in order to update the base image files for all of your tests.
 
