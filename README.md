@@ -9,30 +9,50 @@ and Image Snapshot: https://www.npmjs.com/package/cypress-image-snapshot
 
 Once installed, clone repo then use the following commands to execute. Make sure to run with --env updateSnapshots=true first to add the base images.
 
+**To run on different enviroments use:**
+
+```cypress:run:stage```
+
+```cypress:run:prod```
+
+so an example of a full command would be:
+
+**Runs FIFA Regression on staging
+
+```npm run cypress:run:stage --  --spec "cypress/integration/FIFA/**/*" ```
+
+**Runs FIFA Regression on prod
+
+```npm run cypress:run:prod --  --spec "cypress/integration/FIFA/**/*" ```
+
 
 **Top Commands**
 
-```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env failOnSnapshotDiff=false```
+Run regressions based on FIFA or Compass Flow - don't fail tests on snapshot diffs
 
-```npm run cy:run --  --spec "cypress/integration/Compass/**/*" --env failOnSnapshotDiff=false```
+```npm run cypress:run:ENV --  --spec "cypress/integration/FIFA/**/*" --env failOnSnapshotDiff=false```
 
-```npm run cy:run --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
+```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --env failOnSnapshotDiff=false```
 
-```npm run cy:run --  --spec "cypress/integration/Compass/**/*" --env updateSnapshots=true```
+Run regressions based on FIFA or Compass Flow - update all base images
+
+```npm run cypress:run:ENV --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
+
+```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --env updateSnapshots=true```
 
 
 
 **Commands of Execution**
 
-Run Full Test Regression: ``` npx cypress run```
+Run Full Test Regression: ``` npx run cypress:run:ENV```
 
-Run Full Test Regression Updating all Base Images: ```npm run cy:run  --env updateSnapshots=true```
+Run Full Test Regression Updating all Base Images: ```npm run cypress:run:ENV  --env updateSnapshots=true```
 
-Run single Test: ``` npm run cy:run --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP_PDP.spec.js"```
+Run single Test: ``` npm run cypress:run:ENV --  --spec "cypress/integration/Compass/Bundles/Bundles_PLP.js"```
 
-Run Test from Specific Folder: ```npm run cy:run --  --spec "cypress/integration/FIFA/**/*"```
+Run Test from Specific Folder: ```npm run cypress:run:ENV --  --spec "cypress/integration/FIFA/**/*"```
 
-Run Test via Visual Test Runner: ``` npx cypress open```
+Run Test via Visual Test Runner: ``` npm run cypress:open:ENV```
 
 
 # Cypress Image snapshot commands and combos
