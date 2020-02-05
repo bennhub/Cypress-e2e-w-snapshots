@@ -26,6 +26,10 @@ so an example of a full command would be:
 ```npm run cypress:run:prod --  --spec "cypress/integration/FIFA/**/*" ```
 
 
+**Run test with record option**
+
+```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --record --key b66f840e-d39c-4d1a-b6e9-11dcefe8f402``
+
 **Top Commands**
 
 Run regressions based on FIFA or Compass Flow - don't fail tests on snapshot diffs
@@ -39,9 +43,7 @@ Run regressions based on FIFA or Compass Flow - update all base images
 ```npm run cypress:run:ENV --  --spec "cypress/integration/FIFA/**/*" --env updateSnapshots=true```
 
 ```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --env updateSnapshots=true```
-
-Run test with record option
-```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --record --key b66f840e-d39c-4d1a-b6e9-11dcefe8f402```
+`
 
 
 
