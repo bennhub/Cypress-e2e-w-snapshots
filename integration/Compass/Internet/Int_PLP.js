@@ -18,9 +18,11 @@ cy.contains('Check availability').click()
 cy.get('[data-qa=button-internet]').click()
 .wait(2000)
 
+Cypress.Cookies.debug(true)
+
 //sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)        
+//cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+     
 
 //Opens T & C section
 cy.contains('View terms and conditions').click()
