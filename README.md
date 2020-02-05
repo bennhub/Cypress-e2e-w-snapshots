@@ -28,7 +28,7 @@ so an example of a full command would be:
 
 **Run test with record option**
 
-```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --record --key b66f840e-d39c-4d1a-b6e9-11dcefe8f402``
+```npm run cypress:run:ENV --  --spec "cypress/integration/Compass/**/*" --record --key b66f840e-d39c-4d1a-b6e9-11dcefe8f402```
 
 **Top Commands**
 
