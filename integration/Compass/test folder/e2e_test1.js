@@ -5,7 +5,7 @@ describe('Home', function() {
     
   //cy.visit(Cypress.env('/'))
 
-  cy.visit('/')
+  //cy.visit('/')
 
   //snapshots page for comparison
   //cy.compareSnapshot('baseURL', 0.0);
@@ -25,12 +25,28 @@ describe('Home', function() {
   //lands back on home page
   //Go to internet plans 
 
-  cy.visit('/internet/plans')
-  //cy.get('[data-qa=button-internet]').click()
-  //.wait(2000)
+//cy.get('[data-qa=button-internet]').click()
+//.wait(2000)
 
-  cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+
+cy.visit('/bundle/plans')
+
+// Enable Pik Filters
+cy.get('[data-testid="pilter-tags-Pik TV"]').click()
   .wait(3000)
+
+// Disable Pik Filter
+cy.get('[data-testid="pilter-tags-Pik TV-selected"]').click()
+.wait(3000)
+
+//Enable GWP
+cy.get('[data-testid="pilter-tags-Gift With Purchase"]').click()
+.wait(3000)
+//Disable GWP
+cy.get('[data-testid="pilter-tags-Gift With Purchase-selected"]').click()
+
+
+ 
 
   //cy.setCookie(Cypress.env('banner_Cookie_Name'))
  //.wait(3000)
