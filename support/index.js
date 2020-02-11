@@ -21,8 +21,7 @@ import './commands'
 // now any cookie with the name the name in the whitelist will
 // not be cleared before each test runs
 Cypress.Cookies.defaults({
-  whitelist: 'QSI_SI_8II6mHwhblM7icZ_intercept',
-  whitelist:'persistent Session'
+  whitelist: 'QSI_SI_8II6mHwhblM7icZ_intercept'
 })
 
 // Alternatively you can use CommonJS syntax:
