@@ -18,10 +18,11 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-// now any cookie with the name 'session_id' will
+// now any cookie with the name the name in the whitelist will
 // not be cleared before each test runs
 Cypress.Cookies.defaults({
-  whitelist: 'QSI_SI_8II6mHwhblM7icZ_intercept'
+  whitelist: 'QSI_SI_8II6mHwhblM7icZ_intercept',
+  whitelist:'SessionToken'
 })
 
 // Alternatively you can use CommonJS syntax:
