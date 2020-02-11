@@ -22,7 +22,7 @@ import './commands'
 // not be cleared before each test runs
 Cypress.Cookies.defaults({
   whitelist: 'QSI_SI_8II6mHwhblM7icZ_intercept',
-  whitelist:'SessionToken'
+  whitelist:'persistent Session'
 })
 
 // Alternatively you can use CommonJS syntax:
