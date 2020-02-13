@@ -27,8 +27,11 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(4000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
-.wait(2000) 
+cy
+.contains('View terms and conditions')
+.should('be.visible', { timeout: 5000 })
+.click()
+
 
 //snapshots page for comparison
  cy.matchImageSnapshot("bundle 7+1+Int150 PDP");

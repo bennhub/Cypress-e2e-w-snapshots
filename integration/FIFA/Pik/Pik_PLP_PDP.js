@@ -24,12 +24,14 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
  
 //Opens FAQ section
 cy.contains('Frequently Asked Questions').click()
-.wait(2000)
+.wait(4000)
         
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
-.wait(2000) 
+/*cy
+.contains('View terms and conditions')
+.should('be.visible', { wait: 3000 })
+.click()*/
 
 //snapshots page for comparison
 cy.matchImageSnapshot("Pik PLP");
@@ -56,8 +58,10 @@ cy.contains('Frequently Asked Questions').click()
 .wait(2000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
-.wait(2000) 
+cy
+.contains('View terms and conditions')
+.should('be.visible', { timeout: 5000 })
+.click() 
 
 //snapshots page for comparison
 //cy.compareSnapshot("Basics+5 PDP");
@@ -85,8 +89,10 @@ cy.contains('Frequently Asked Questions').click()
 .wait(2000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
-.wait(2000) 
+cy
+.contains('View terms and conditions')
+.should('be.visible', { timeout: 5000 })
+.click() 
 
 //snapshots page for comparison
 cy.matchImageSnapshot("Basics+Crave PDP");

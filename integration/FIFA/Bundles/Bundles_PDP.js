@@ -19,15 +19,17 @@ cy.get('[data-qa=button-bundle]').click()
    
 //Bundle PDP FIFA Qual
 
-//******Bundles Optik 7-1 + Int 150 PDP
+//******Bundles optik-4plus1-gigabit PDP
 cy.visit('/product/optik-4plus1-gigabit?bundle')
 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
-         //.wait(2000) 
+cy
+.contains('View terms and conditions')
+.should('be.visible', { timeout: 5000 })
+.click()
 
 //snapshots page for comparison
  cy.matchImageSnapshot("optik-4plus1-gigabit PDP");
