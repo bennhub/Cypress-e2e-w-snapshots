@@ -8,7 +8,7 @@ cy.contains('Get started').click()
 
 //Quals Compass address
 cy.get('#autocomplete-form-address-google')
-        .type(Cypress.env('address_FIFA'))
+        .type(Cypress.env('address_150'))
   
 cy.contains('Check availability').click()
          .wait(7000) 
