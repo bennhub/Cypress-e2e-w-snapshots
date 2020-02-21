@@ -1,4 +1,4 @@
-# Cata_Automation_E2E
+# cataAutomationE2E
 
 **To Run Install Cypress and Cypress Image Snapshot**
 ----------------------------------------------------
