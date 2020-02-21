@@ -15,12 +15,13 @@ cy.contains('Check availability').click()
 //visit Bundles plans page
 cy.get('[data-qa=button-bundle]').click()
 .wait(2000)        
-   
+  
+cy.get('.style__OfferGridItem-sc-1ad47ew-0:nth-child(1) .TDS_BaseButton-modules__sizing___2kf7G').click()
 
   //Compass qual from Home 
     
   //cy.visit(Cypress.env('/'))
-
+ 
   //cy.visit('/')
 
   //snapshots page for comparison
