@@ -14,7 +14,7 @@ cy.contains('Check availability').click()
          .wait(7000) 
 
        
-//Bundle PDP FIFA Qual
+//Bundle PDP Compass Qual
 
 //******Bundles Optik 7-1 + Int 150 PDP
 cy.visit('/product/optik-4plus1-int75-freetv?bundle')

@@ -9,15 +9,16 @@ cy.contains('Get started').click()
 //Quals Compass address
 cy.get('#autocomplete-form-address-google')
         .type(Cypress.env('address_150'))
-  
+
 cy.contains('Check availability').click()
-         .wait(7000) 
+        .wait(7000) 
 
        
-//Bundle PDP FIFA Qual
+//Bundle PDP Compass Qual
 
 //******Bundles Optik 7-1 + Int 150 PDP
-cy.visit('/product/optik-4plus1-internet-75-freetv?bundle')
+cy.visit('/product/optik-4plus1-internet-75?bundle')
+         
 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
@@ -29,7 +30,7 @@ cy
 .click()
 
 //snapshots page for comparison
-cy.matchImageSnapshot("optik-4plus1-internet-75-freetv?bundle PDP");
+cy.matchImageSnapshot("optik-4plus1-internet-75?bundle PDP");
 
 })
 })
