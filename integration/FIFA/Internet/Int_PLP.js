@@ -23,6 +23,7 @@ Cypress.Cookies.debug(true)
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
+
 //Expand See More Section
 cy.contains('See more plans').click()
 .wait(2000)

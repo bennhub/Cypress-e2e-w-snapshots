@@ -23,6 +23,14 @@ Cypress.Cookies.debug(true)
 //sets cookie so purple banner does not apppear 
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
+
+//Error messaging ineligible plan visble
+cy.contains("We're working on getting PureFibre to your area.").should('be.visible')
+.wait(2000)
+
+//Error messaging ineligible plan visble close
+cy.get('.StyledInteractiveIconButton-sc-1phwvk2-0').click()
+
 //Expand See More Section
 cy.contains('See more plans').click()
 .wait(2000)
