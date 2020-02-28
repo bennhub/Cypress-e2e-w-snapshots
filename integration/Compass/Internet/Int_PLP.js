@@ -2,27 +2,15 @@ describe('Internet Plans', function() {
     it('Gets, types and visual assertion', function() {
 
 
-//Visits Home and begins to qual
+//Visit base url then qual compass
 cy.visit('/')
-cy.contains('Get started').click()
-
-//Quals Compass address
-cy.get('#autocomplete-form-address-google')
-.type(Cypress.env('address_150'))
-  
-cy.contains('Check availability').click()
-.wait(7000) 
+  .contains('Get started').click()
+  .fillCompassAddress() 
    
 //lands back on home page
 //Go to internet plans 
 cy.get('[data-qa=button-internet]').click()
 .wait(2000)
-
-Cypress.Cookies.debug(true)
-
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-
 
 //Error messaging ineligible plan visble
 cy.contains("We're working on getting PureFibre to your area.").should('be.visible')

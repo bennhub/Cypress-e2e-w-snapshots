@@ -1,16 +1,10 @@
 describe('Internet Addons FIFA', function() {
     it('Gets, types and visual tests', function() {
 
-//Visits Home and begins to qual
+//Visit base url then qual compass
 cy.visit('/')
-cy.contains('Get started').click()
-
-//Quals Compass address
-cy.get('#autocomplete-form-address-google')
-        .type(Cypress.env('address_FIFA'))
-  
-cy.contains('Check availability').click()
-         .wait(7000) 
+  .contains('Get started').click()
+  .fillFifaAddress() 
    
 //visit internet Addons PLP
 cy.visit('/internet/addons')

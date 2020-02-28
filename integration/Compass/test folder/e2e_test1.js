@@ -2,7 +2,7 @@ describe('Home', function() {
     it('Gets, types and visual tests', function() {
 
       //Visits Home and begins to qual
-cy.visit('/')
+/*cy.visit('/')
 cy.contains('Get started').click()
 
 //Quals Compass address
@@ -74,4 +74,4 @@ cy.get('[data-testid="pilter-tags-Gift With Purchase-selected"]').click()
   
     })
   })
-  
+ 
