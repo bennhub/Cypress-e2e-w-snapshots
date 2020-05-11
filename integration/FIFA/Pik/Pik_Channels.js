@@ -6,7 +6,9 @@ describe('Pik Channels FIFA', function() {
 cy.visit('/')
   .contains('Get started').click()
   .fillFifaAddress()
-   
+ 
+  
+  cy.visit('/')
 //lands back on home page
 //Go to Pik plans 
 cy.get('[data-qa=button-pik]').click()

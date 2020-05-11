@@ -8,6 +8,7 @@ cy.visit('/')
   .fillFifaAddress() 
    
 //lands back on home page
+cy.visit('/')
 //Go to Optik plans 
 cy.get('[data-qa=button-optik]').click()
 .wait(2000)

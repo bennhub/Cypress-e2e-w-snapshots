@@ -5,7 +5,8 @@ describe('Pik Addons', function() {
 cy.visit('/')
   .contains('Get started').click()
   .fillCompassAddress() 
-   
+
+  cy.visit('/') 
 //visit internet 150 2yr PDP
 cy.visit('/pik/addons')
 

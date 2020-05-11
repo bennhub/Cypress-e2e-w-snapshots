@@ -8,6 +8,7 @@ cy.visit('/')
   .fillCompassAddress() 
    
 //lands back on home page
+cy.visit('/')
 //Go to Pik plans 
 cy.get('[data-qa=button-pik]').click()
 .wait(2000)

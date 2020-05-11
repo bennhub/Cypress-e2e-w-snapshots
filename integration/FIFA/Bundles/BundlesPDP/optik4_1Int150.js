@@ -9,7 +9,7 @@ cy.visit('/')
 
        
 //Bundle PDP FIFA Qual
-
+cy.visit('/')
 //******Bundles Optik 7-1 + Int 150 PDP
 cy.visit('/product/optik-4plus1-int150?bundle')
 

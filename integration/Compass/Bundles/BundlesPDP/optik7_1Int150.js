@@ -9,7 +9,7 @@ cy.visit('/')
 
        
 //Bundle PDP Compass Qual
-
+cy.visit('/')
 //******Bundles Optik 7-1 + Int 150 PDP
 cy.visit('/product/optik-7plus1-int150?bundle')
 

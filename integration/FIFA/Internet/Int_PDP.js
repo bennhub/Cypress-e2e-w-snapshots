@@ -5,7 +5,8 @@ describe('Internet PDP FIFA', function() {
 cy.visit('/')
   .contains('Get started').click()
   .fillFifaAddress() 
-   
+ 
+  cy.visit('/')
 //visit internet 750 2yr PDP
 cy.visit('/product/internet-750-750')
 

@@ -8,6 +8,7 @@ cy.visit('/')
   .fillFifaAddress() 
    
 //lands back on home page
+cy.visit('/')
 //Go to HomePhone plans 
 cy.get('[data-qa=button-home-phone]').click()
 .wait(4000)

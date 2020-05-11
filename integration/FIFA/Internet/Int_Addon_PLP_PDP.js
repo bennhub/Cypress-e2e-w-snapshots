@@ -5,7 +5,7 @@ describe('Internet Addons FIFA', function() {
 cy.visit('/')
   .contains('Get started').click()
   .fillFifaAddress() 
-   
+  cy.visit('/')  
 //visit internet Addons PLP
 cy.visit('/internet/addons')
 

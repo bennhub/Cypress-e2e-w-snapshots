@@ -5,7 +5,8 @@ describe('Internet GWP FIFA', function() {
 cy.visit('/')
   .contains('Get started').click()
   .fillFifaAddress() 
-   
+  
+  cy.visit('/')  
 //visit internet 150 2yr PDP
 cy.visit('/internet/gifts')
 

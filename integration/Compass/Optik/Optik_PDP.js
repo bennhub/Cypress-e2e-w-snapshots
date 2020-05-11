@@ -7,7 +7,7 @@ cy.visit('/')
   .contains('Get started').click()
   .fillCompassAddress() 
    
-
+cy.visit('/')
 //visit Optik Essentials 2yr PDP Plans
 cy.visit('/product/essentials-mediaroomtv-hs2-0')
 
