@@ -1,51 +1,26 @@
 describe('Pik Channels', function() {
-    it('Gets, types and visual tests', function() {
-
-
-//Visit base url then qual compass
-cy.visit('/')
-  .contains('Get started').click()
-  .fillCompassAddress() 
-   
-//lands back on home page
-cy.visit('/')
-//Go to Pik plans 
-cy.get('[data-qa=button-pik]').click()
-.wait(2000)
-
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
-
-   
-//visit pik channels
-cy.visit('/pik/channels')
-.wait(3000) 
-
-//Click on Language filter
-cy.contains('Language').click()
-.wait(2000) 
-// optik Language filter snap
-cy.get(':nth-child(1) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Language filter')
-
-//Click on category filters
-cy.contains('Category').click()
-.wait(2000) 
-// optik category filter snap
-cy.get(':nth-child(2) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Category filter')
-
-//Opens FAQ
-cy.contains('Frequently Asked Questions').click()
-.wait(2000) 
-
-//Opens T & C section
-cy.contains('View terms and conditions').click()
-.wait(2000) 
-
-//snapshots page for comparison
-cy.matchImageSnapshot("Pik Channels");
-
-
-    })
+  it('Gets, types and visual tests', function() {
+    cy.visit('/')//Visit base url then qual compass
+      .contains('Get started').click()
+      .fillCompassAddress() 
+      .visit('/')//lands back on home page
+      .get('[data-qa=button-pik]').click()//Go to Pik plans 
+      .wait(2000)
+      .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
+      .wait(3000)
+      .visit('/pik/channels')//visit pik channels
+      .wait(3000) 
+      .contains('Language').click()//Click on Language filter
+      .wait(2000) 
+      .get(':nth-child(1) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Language filter')// optik Language filter snap
+      .contains('Category').click()//Click on category filters
+      .wait(2000) 
+      .get(':nth-child(2) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Category filter')// optik category filter snap
+      .contains('Frequently Asked Questions').click()//Opens FAQ
+      .wait(2000) 
+      .contains('View terms and conditions').click()//Opens T & C section
+      .wait(2000) 
+      .matchImageSnapshot("Pik Channels");//snapshots page for comparison
   })
+})
   

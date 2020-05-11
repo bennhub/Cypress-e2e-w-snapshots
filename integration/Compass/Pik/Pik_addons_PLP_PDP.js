@@ -1,60 +1,29 @@
 describe('Pik Addons', function() {
-    it('Gets, types and visual tests', function() {
-
-//Visit base url then qual compass
-cy.visit('/')
-  .contains('Get started').click()
-  .fillCompassAddress() 
-
-  cy.visit('/') 
-//visit internet 150 2yr PDP
-cy.visit('/pik/addons')
-
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
-
-//Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
-         .wait(2000) 
-
-//Opens T &C section
-cy.contains('View terms and conditions').click()
-         .wait(2000) 
-
-//snapshots page for comparison
-cy.matchImageSnapshot("Pik Addons PLP");
-
-
-//visit Pik Addon Apple TV 32gb
-cy.visit('/product/apple-tv')
-
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
-
-//Opens Details section
-cy.contains('Details').click()
-.wait(2000)
-
-//Opens Whats in the box
-cy.contains("What’s in the box").click()
-.wait(2000) 
-
-//Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
-.wait(2000)
-
-//Opens T & C section
-cy.contains('View terms and conditions').click()
-.wait(2000) 
-
-//snapshots page for comparison
-cy.matchImageSnapshot("Pik Addons Apple TV");
-
-
-
-
-    })
+  it('Gets, types and visual tests', function() {
+    cy.visit('/')//Visit base url then qual compass
+      .contains('Get started').click()
+      .fillCompassAddress() 
+      .visit('/') 
+      .visit('/pik/addons')//visit internet 150 2yr PDP
+      .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
+      .wait(3000)
+      .contains('Frequently Asked Questions').click()//Opens FAQ section
+      .wait(2000) 
+      .contains('View terms and conditions').click()//Opens T &C section
+      .wait(2000) 
+      .matchImageSnapshot("Pik Addons PLP");//snapshots page for comparison
+    cy.visit('/product/apple-tv')//visit Pik Addon Apple TV 32gb
+      .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear
+      .wait(3000)
+      .contains('Details').click()//Opens Details section
+      .wait(2000)
+      .contains("What’s in the box").click()//Opens Whats in the box
+      .wait(2000) 
+      .contains('Frequently Asked Questions').click()//Opens FAQ section
+      .wait(2000)
+      .contains('View terms and conditions').click()
+      .wait(2000) 
+      .matchImageSnapshot("Pik Addons Apple TV");//snapshots page for comparison
   })
+})
   
