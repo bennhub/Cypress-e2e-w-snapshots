@@ -10,17 +10,17 @@ describe('Pik Channels', function() {
       .wait(3000)
       .visit('/pik/channels')//visit pik channels
       .wait(3000) 
-      .contains('Language').click()//Click on Language filter
+    cy.window().contains('Language').click()//Click on Language filter
       .wait(2000) 
       .get(':nth-child(1) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Language filter')// optik Language filter snap
-      .contains('Category').click()//Click on category filters
+    cy.window().contains('Category').click()//Click on category filters
       .wait(2000) 
       .get(':nth-child(2) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Category filter')// optik category filter snap
-      .contains('Frequently Asked Questions').click()//Opens FAQ
+    cy.window().contains('Frequently Asked Questions').click()//Opens FAQ
       .wait(2000) 
-      .contains('View terms and conditions').click()//Opens T & C section
+    cy.window().contains('View terms and conditions').click()//Opens T & C section
       .wait(2000) 
-      .matchImageSnapshot("Pik Channels");//snapshots page for comparison
+    cy.matchImageSnapshot("Pik Channels");//snapshots page for comparison
   })
 })
   

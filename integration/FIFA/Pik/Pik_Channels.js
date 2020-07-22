@@ -24,23 +24,23 @@ cy.visit('/pik/channels')
 .wait(3000) 
 
 //Click on Language filter
-cy.contains('Language').click()
+cy.window().contains('Language').click()
 .wait(2000) 
 // optik Language filter snap
 cy.get(':nth-child(1) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Language filter')
 
 //Click on category filters
-cy.contains('Category').click()
+cy.window().contains('Category').click()
 .wait(2000) 
 // optik category filter snap
 cy.get(':nth-child(2) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Category filter')
 
 //Opens FAQ
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
 .wait(2000) 
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison

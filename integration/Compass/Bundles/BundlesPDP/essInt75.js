@@ -9,7 +9,7 @@ describe('Bundles_Compass', function() {
       .wait(3000)
       .get('.StyledClickable-lxf9hd-0')//Opens T & C section
       .should('be.visible', { timeout: 5000 }).click()
-      .matchImageSnapshot("essentials-int75?bundle PDP");//snapshot Bundle page 
+    cy.matchImageSnapshot("essentials-int75?bundle PDP");//snapshot Bundle page 
     cy.get('[data-qa=button-addToCart-essentials-int75').click()//Panel [Add to Cart]
       .wait(2000)
       .get('[data-qa=skip-channel').click()

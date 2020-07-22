@@ -1,4 +1,4 @@
-describe('Bundles_Compass', function() {
+/*describe('Bundles_Compass', function() {
     it('Gets, types and visual tests', function() {
 
 
@@ -27,3 +27,4 @@ cy.matchImageSnapshot("optik-4plus1-internet-75-freetv?bundle PDP");
 
 })
 })
+*/

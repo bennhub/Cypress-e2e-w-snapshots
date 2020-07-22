@@ -8,9 +8,9 @@ describe('Internet Plans', function() {
       .wait(2000)
       .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
       .wait(3000)
-      .contains('View terms and conditions').click()//Opens T & C section
+    cy.window().contains('View terms and conditions').click()//Opens T & C section
       .wait(2000) 
-      .matchImageSnapshot("Optik PLP");//snapshots page for comparison
+    cy.matchImageSnapshot("Optik PLP");//snapshots page for comparison
   })
 })
   

@@ -16,11 +16,11 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
          .wait(2000) 
 
 //Opens T &C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
          .wait(2000) 
 //snapshots page for comparison
 cy.matchImageSnapshot("Optik Gwp PLP");
@@ -33,11 +33,11 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
          .wait(2000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
          .wait(2000) 
 
 //snapshots page for comparison

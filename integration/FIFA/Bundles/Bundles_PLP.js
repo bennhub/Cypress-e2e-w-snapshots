@@ -9,7 +9,7 @@ cy.get('[data-qa=button-bundle]').click()//visit Bundles plans page
   .wait(2000)
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie to prevent purlple banner from appearing
   .wait(3000)
-cy.contains('View terms and conditions').click()//Opens T & C section
+cy.window().contains('View terms and conditions').click()//Opens T & C section
   .wait(2000) 
 cy.matchImageSnapshot("bundPLP_nofilter");//snapshots page for comparison
 // Offers Element grid snap

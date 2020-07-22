@@ -18,7 +18,7 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
  
 //Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
 .wait(4000)
         
 
@@ -41,20 +41,19 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
 
 //Opens Details section
-cy.contains('Details').click()
+cy.window().contains('Details').click()
 .wait(2000)
 
 //Opens channels section
-cy.contains('The basic channels').click()
+cy.window().contains('The basic channels').click()
 .wait(2000)         
 
 //Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
 .wait(2000)
 
 //Opens T & C section
-cy
-.contains('View terms and conditions')
+cy.window().contains('View terms and conditions')
 .should('be.visible', { timeout: 5000 })
 .click() 
 
@@ -72,20 +71,19 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 
 
 //Opens Details section
-cy.contains('Details').click()
+cy.window().contains('Details').click()
 .wait(2000)
 
 //Opens channels section
-cy.contains('The basic channels').click()
+cy.window().contains('The basic channels').click()
 .wait(2000)         
 
 //Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
 .wait(2000)
 
 //Opens T & C section
-cy
-.contains('View terms and conditions')
+cy.window().contains('View terms and conditions')
 .should('be.visible', { timeout: 5000 })
 .click() 
 

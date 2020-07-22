@@ -7,15 +7,15 @@ describe('Internet Plans', function() {
       .visit('/internet/addons')//visit internet Addons PLP
       .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
       .wait(3000)
-      .contains('View terms and conditions').click()//Opens T & C section
+    cy.window().contains('View terms and conditions').click()//Opens T & C section
       .wait(2000) 
-      .matchImageSnapshot("Int_Addon_PLP");//snapshots page for comparison
+    cy.matchImageSnapshot("Int_Addon_PLP");//snapshots page for comparison
     cy.visit('/product/telus-boost-wi-fi-starter-pack')//visit internet Addon Telus Boost PDP
       .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
       .wait(3000)
-      .contains('View terms and conditions').click()//Opens T & C section
+    cy.window().contains('View terms and conditions').click()//Opens T & C section
       .wait(2000) 
-      .matchImageSnapshot("Int_Addon_TB_PDP");//snapshots page for comparison
+    cy.matchImageSnapshot("Int_Addon_TB_PDP");//snapshots page for comparison
   })
 })
   

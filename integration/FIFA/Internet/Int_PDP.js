@@ -15,7 +15,7 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
          .wait(2000) 
 
 //snapshots page for comparison
@@ -24,7 +24,7 @@ cy.matchImageSnapshot("Int PDP");
 
 
 //go to internet 150 no-term PDP
-cy.contains('Switch to no term plan').click()
+cy.window().contains('Switch to no term plan').click()
 .wait(2000)
 
 //sets cookie so purple banner does not apppear 
@@ -32,7 +32,7 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
          .wait(2000) 
 //snapshots page for comparison
 //cy.compareSnapshot("Int_150 NoTerm");
@@ -47,7 +47,7 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
 .wait(2000) 
 
 
@@ -56,7 +56,7 @@ cy.contains('View terms and conditions').click()
 cy.matchImageSnapshot("Int 25 2yr PDP");
 
 //go to internet 75 no-term PDP
-cy.contains('Switch to no term plan').click()
+cy.window().contains('Switch to no term plan').click()
 .wait(2000)
 
 //sets cookie so purple banner does not apppear 
@@ -64,7 +64,7 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
         
  //Opens T & C section
-cy.contains('View terms and conditions').click()
+ cy.window().contains('View terms and conditions').click()
         .wait(2000) 
                  
 

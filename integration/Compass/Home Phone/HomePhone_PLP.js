@@ -8,7 +8,7 @@ describe('Home Phone', function() {
       .wait(2000)
     cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
       .wait(3000)        
-    cy.contains('View terms and conditions').click()//Opens T & C section
+    cy.window().contains('View terms and conditions').click()//Opens T & C section
       .wait(2000) 
     cy.matchImageSnapshot("Homephone PLP")//snapshots page for comparisons
   })

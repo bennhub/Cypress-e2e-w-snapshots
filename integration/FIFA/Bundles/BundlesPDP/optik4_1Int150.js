@@ -4,7 +4,7 @@ describe('Bundles_Compass', function() {
 
 //Visit base url then qual compass
 cy.visit('/')
-  .contains('Get started').click()
+cy.window().contains('Get started').click()
   .fillFifaAddress() 
 
        

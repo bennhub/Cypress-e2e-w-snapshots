@@ -1,4 +1,4 @@
-describe('Bundles_Compass', function() {
+/*describe('Bundles_Compass', function() {
     it('Gets, types and visual tests', function() {
 
 
@@ -27,3 +27,4 @@ cy.matchImageSnapshot("pik-tv-and-internet-150?bundle PDP");
 
 })
 })
+*/

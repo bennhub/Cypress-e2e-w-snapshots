@@ -18,33 +18,33 @@ cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
 .wait(3000)
 
 //Click on Themepack and channels tab
-cy.contains('Theme packs and channels').click()
+cy.window().contains('Theme packs and channels').click()
 .wait(3000) 
 
 //Click on category filter
-cy.contains('Category').click()
+cy.window().contains('Category').click()
 .wait(3000) 
 // optik category filter snap
 cy.get(':nth-child(1) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Category filter')
 
 //Click on Language filter
-cy.contains('Language').click()
+cy.window().contains('Language').click()
 .wait(3000) 
 // optik Language filter snap
 cy.get(':nth-child(2) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Language filter')
 
 //Click on Type filter
-cy.contains('Type').click()
+cy.window().contains('Type').click()
 .wait(3000)
 // optik Type filter snap
 cy.get(':nth-child(3) > .style__Overlay-sc-1cjw4jg-2').matchImageSnapshot('Type filter')
 
 //Opens FAQ
-cy.contains('Frequently Asked Questions').click()
+cy.window().contains('Frequently Asked Questions').click()
 .wait(2000) 
 
 //Opens T & C section
-cy.contains('View terms and conditions').click()
+cy.window().contains('View terms and conditions').click()
 .wait(2000) 
 
 //snapshots page for comparison
