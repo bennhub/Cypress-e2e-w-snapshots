@@ -1,30 +1,17 @@
 /*describe('Bundles_Compass', function() {
     it('Gets, types and visual tests', function() {
-
-
-//Visit base url then qual compass
-cy.visit('/')
+cy.visit('/')//Visit base url then qual compass
   .contains('Get started').click()
   .fillFifaAddress() 
-
-       
-//Bundle PDP FIFA Qual
 cy.visit('/')
-//******Bundles Optik 7-1 + Int 150 PDP
-cy.visit('/product/essentials-int75?bundle')
-
+cy.visit('/product/essentials-int75?bundle')//Bundles Optik 7-1 + Int 150 PDP
 cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
-
-//Opens T & C section
-cy
-.contains('View terms and conditions')
-.should('be.visible', { timeout: 5000 })
-.click()
-
-//snapshots page for comparison
-cy.matchImageSnapshot("essentials-int75?bundle PDP");
-
-})
+  .wait(3000)
+cy.contains('View terms and conditions')//Opens T & C section
+  .should('be.visible', { timeout: 5000 })
+  .click()
+cy.matchImageSnapshot("essentials-int75?bundle PDP");//snapshots page for comparison
+   })
 })
 */
+

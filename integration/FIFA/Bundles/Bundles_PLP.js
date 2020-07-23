@@ -14,9 +14,6 @@ cy.window().contains('View terms and conditions').click()//Opens T & C section
 cy.matchImageSnapshot("bundPLP_nofilter");//snapshots page for comparison
 // Offers Element grid snap
 //cy.get('.style__OfferGrid-sc-1ad47ew-1').matchImageSnapshot('just-grid')
-cy.get('[data-testid="pilter-tags-Gift With Purchase"]').click()// Enable GWP Filter
-  .wait(2000)
-cy.matchImageSnapshot("bundPLP_GwpFilter");//snapshots page for comparison
 cy.get('[data-testid="pilter-tags-Gift With Purchase-selected"]').click()// Disable GWP Filter
   .wait(3000)
 cy.get('[data-testid="pilter-tags-Pik TV"]').click()// Enable Pik Filters

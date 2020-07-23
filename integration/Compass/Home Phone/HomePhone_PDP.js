@@ -19,7 +19,7 @@ describe('Home Phone', function() {
       .wait(3000)
     cy.window().contains('Calling features').click()//Opens calling feautures section
       .wait(2000)         
-    cy.window().contains('View terms and conditions').click()//Opens T & C section
+    cy.window().contains('View terms and conditions',{ timeout: 10000 }).click()//Opens T & C section
       .wait(2000) 
     cy.matchImageSnapshot("Homephone PDP");//snapshots page for comparison
   })
