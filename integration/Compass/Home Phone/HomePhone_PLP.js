@@ -1,9 +1,9 @@
 describe('Home Phone', function() {
   it('Gets, types and visual tests', function() {
-    cy.visit('/')//Visit base url then qual compass
+    cy.visitHSCHomepage()//Visit base url then qual compass
       .contains('Get started').click()
       .fillCompassAddress()
-    cy.visit('/')//Go to HomePhone plans 
+    cy.visitHSCHomepage()//Go to HomePhone plans 
     cy.get('[data-qa=button-home-phone]').click()
       .wait(2000)
     cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 

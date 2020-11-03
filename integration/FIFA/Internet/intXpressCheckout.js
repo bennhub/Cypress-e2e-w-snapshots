@@ -1,34 +1,33 @@
 /*describe('Internet xpress checkout FIFA', function() {
     it('Gets, types and visual tests', function() {
 
-//Visits Home and begins to qual
-cy.visit('/home-services/internet/plans')
+cy.visit('/home-services/internet/plans')//Visits Home and begins to qual
 
-//sets cookie so purple banner does not apppear 
-//cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
+
+//cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
 //.wait(3000)
 
-//Opens FAQ section
-cy.window().contains('Cancellation policies', { timeout: 10000 }).click()
+
+cy.window().contains('Cancellation policies', { timeout: 10000 }).click()//Opens FAQ section
          //.wait(2000) 
 
-//Opens T & C section
-cy.window().contains('Installation details').click()
+
+cy.window().contains('Installation details').click()//Opens T & C section
          .wait(2000) 
 
-//Upregrade your plan should be visble
-cy.get('[data-qa=upgrade-your-plan]').should('be.visible')
+
+cy.get('[data-qa=upgrade-your-plan]').should('be.visible')//Upregrade your plan should be visble
 .wait(1000)
 
-//snapshots page for comparison
-cy.matchImageSnapshot("Xpress Internet page");
 
-//Go to internet plans 
-/*cy.get('[data-qa=button-order-now-gigabit-internet-24]').click()
+cy.matchImageSnapshot("Xpress Internet page")//snapshots page for comparison
+
+ 
+/*cy.get('[data-qa=button-order-now-gigabit-internet-24]').click()//Go to internet plans
 .wait(2000)
 
-//Qual FIFA
-.fillFifaAddress()
+
+.fillFifaAddress()//Qual FIFA
 .wait(3000)
 
 //Url should include express checkout

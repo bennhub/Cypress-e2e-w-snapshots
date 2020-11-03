@@ -1,9 +1,9 @@
 describe('Optik Channels', function() {
   it('Gets, types and visual tests', function() {
-    cy.visit('/')//Visit base url then qual compass
+    cy.visitHSCHomepage()//Visit base url then qual compass
       .contains('Get started').click()
       .fillCompassAddress() 
-      .visit('/')//lands back on home page
+    cy.visitHSCHomepage()//lands back on home page
       .get('[data-qa=button-optik]').click()//Go to Optik plans 
       .wait(2000)
       .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 

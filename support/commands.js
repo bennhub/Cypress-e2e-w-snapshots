@@ -1,41 +1,10 @@
 
-
-/**
- * TO BE BUILT
- * getAuthHeaders - generates headers for an authenticated request
- * 
- * @returns object - an object with `auth.username`, `auth.password`, `headers.authentication` and `headers['t-session-token']` values
- */
-
-// const getAuthHeaders = () => {
-// }
-
-Cypress.Commands.add('visitPage', (path, opts={}) => {
-  cy.visit(path, {...opts, ...getStagingOpts()})
-})
-
-Cypress.Commands.add('visitHSCHomepage', (lang = "en") => {
-  cy.visit(`/${lang}/shop/home`, getStagingOpts())
-})
-
-Cypress.Commands.add('visitExpressHomepage', (lang = "en") => {
-  cy.visit(`/${lang}/shop/home-services/internet/plans`, getStagingOpts())
-})
-
-// Auth Request
-// Uses the CREDENTIALS env variable
-Cypress.Commands.add('getNewSession', (opts = {}) => {
-  const sessionToken = getSessionToken().token
-  opts.headers['t-session-token'] = sessionToken
-  return cy.request({ ...opts, ...getStagingOpts() })
-})
-////
 //Image Snapshot
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 addMatchImageSnapshotCommand({
-  failureThreshold: 0.03,
+  failureThreshold: 0.00,
   failureThresholdType: 'percent',
-  customDiffConfig: { threshold: 0.1 },
+  customDiffConfig: { threshold: 0 },
   //capture: 'viewport',
 });
 
@@ -47,3 +16,30 @@ Cypress.Commands.add("setResolution", (size) => {
     cy.viewport(size);
   }
  })
+
+
+ const getOpts = () => {
+  const credentials = Cypress.env('CREDENTIALS')
+  const opts = {}
+  cy.log(credentials)
+  if(credentials) {
+    const [ username, password ] = credentials.split(':')
+    opts.auth = {
+      username,
+      password
+    }
+  }
+  return opts
+}
+
+Cypress.Commands.add('visitAuthed', (path, opts={}) => {
+  cy.visit(path, {...opts, ...getOpts()})
+})
+
+Cypress.Commands.add('visitHSCHomepage', (lang = "en") => {
+  cy.visit(`/${lang}/shop/home`, getOpts())
+})
+
+Cypress.Commands.add('visitExpressHomepage', (lang = "en") => {
+  cy.visit(`/${lang}/shop/home-services/internet/plans`, getOpts())
+})

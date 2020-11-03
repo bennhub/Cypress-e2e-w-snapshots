@@ -1,9 +1,9 @@
 describe('Bundles_Compass', function() {
   it('Gets, types and visual tests', function() {
-    cy.visit('/')//Visit base url 
+    cy.visitHSCHomepage()
       .contains('Get started').click()
       .fillCompassAddress() //Qual Compass via API endpoint
-      .visit('/')//Back to base url (needed for running tests on wcpreview)
+  cy.visitHSCHomepage()//Back to base url (needed for running tests on wcpreview)
       .get('[data-qa=button-bundle]').click()//visit Bundles plans page
       .wait(2000)
       .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie to prevent purlple banner from appearing

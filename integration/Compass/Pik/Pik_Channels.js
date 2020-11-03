@@ -1,14 +1,14 @@
 describe('Pik Channels', function() {
   it('Gets, types and visual tests', function() {
-    cy.visit('/')//Visit base url then qual compass
+    cy.visitHSCHomepage()//Visit base url then qual compass
       .contains('Get started').click()
       .fillCompassAddress() 
-      .visit('/')//lands back on home page
+    cy.visitHSCHomepage()//lands back on home page
       .get('[data-qa=button-pik]').click()//Go to Pik plans 
       .wait(2000)
       .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//sets cookie so purple banner does not apppear 
       .wait(3000)
-      .visit('/pik/channels')//visit pik channels
+      .visit('/shop/home/pik/channels')//visit pik channels
       .wait(3000) 
     cy.window().contains('Language').click()//Click on Language filter
       .wait(2000) 
