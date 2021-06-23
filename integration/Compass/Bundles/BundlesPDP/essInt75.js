@@ -1,7 +1,6 @@
 describe('Bundles_Compass', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url 
-      .contains('Get started').click()
       .fillCompassAddress()//Qual Compass 
       .visitHSCHomepage()//Back to base url (needed for running tests on wcpreview)
       .visit('/shop/home/product/essentials-int75?bundle') //Go to Bundles Optik 7-1 + Int 150 PDP

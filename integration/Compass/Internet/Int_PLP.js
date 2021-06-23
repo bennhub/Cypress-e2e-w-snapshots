@@ -1,7 +1,7 @@
 describe('Internet Plans', function() {
   it('Gets, types and visual assertion', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillCompassAddress() 
     cy.visitHSCHomepage()//bring me back to the original baseurl (for wcpreview punting issue)
       .get('[data-qa=button-internet]').click()

@@ -1,7 +1,7 @@
 describe('Internet Plans', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillCompassAddress() 
     cy.visitHSCHomepage()//bring me back to the original baseurl (for wcpreview punting issue)
       .visit('/shop/home/product/internet-150-30')//go to internet PDP

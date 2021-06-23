@@ -1,7 +1,7 @@
 describe('Optik GWP FIFA', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillFifaAddress() 
     cy.visitHSCHomepage()
     cy.visit('/shop/home/optik/gifts')//visit internet 150 2yr PDP

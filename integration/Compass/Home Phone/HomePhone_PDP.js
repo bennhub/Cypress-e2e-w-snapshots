@@ -1,7 +1,7 @@
 describe('Home Phone', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillCompassAddress() 
     cy.visitHSCHomepage()//Go to HomePhone plans 
       .get('[data-qa=button-home-phone]').click()

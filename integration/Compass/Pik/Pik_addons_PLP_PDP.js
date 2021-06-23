@@ -1,7 +1,7 @@
 describe('Pik Addons', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillCompassAddress() 
     cy.visitHSCHomepage() 
       .visit('/shop/home/pik/addons')//visit internet 150 2yr PDP

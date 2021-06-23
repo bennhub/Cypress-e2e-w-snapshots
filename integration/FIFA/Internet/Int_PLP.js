@@ -1,7 +1,7 @@
 describe('Internet Plans', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillFifaAddress() 
       cy.visitHSCHomepage()//lands back on home page (helps when testing on preview env)
       cy.get('[data-qa=button-internet]').click()//Go to internet plans 

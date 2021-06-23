@@ -1,7 +1,7 @@
 describe('Optik GWP', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillCompassAddress() 
     cy.visitHSCHomepage()  
       .visit('/shop/home/optik/gifts')

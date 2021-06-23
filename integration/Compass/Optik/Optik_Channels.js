@@ -1,7 +1,7 @@
 describe('Optik Channels', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillCompassAddress() 
     cy.visitHSCHomepage()//lands back on home page
       .get('[data-qa=button-optik]').click()//Go to Optik plans 

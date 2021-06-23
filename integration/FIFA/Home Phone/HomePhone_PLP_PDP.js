@@ -1,7 +1,7 @@
 describe('Home Phone FIFA', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
-      .contains('Get started').click()
+      //.contains('Get started').click()
       .fillFifaAddress() 
     cy.visitHSCHomepage()//lands back on home page
     cy.get('[data-qa=button-home-phone]').click()//Go to HomePhone plans 
