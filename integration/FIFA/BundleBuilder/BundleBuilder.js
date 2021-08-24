@@ -1,3 +1,4 @@
+/*
 describe(' Bundle Builder to Interstial', function() {
     it('Verify Bundle Builder to Interstial Flow', function() {
       cy.visitHSCHomepage()//Visit base url then qual compass
@@ -14,4 +15,5 @@ describe(' Bundle Builder to Interstial', function() {
       cy.matchImageSnapshot("Interstital_fullpage_snap")//snapshots page for comparison
       })
     })
+    */
     

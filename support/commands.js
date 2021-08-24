@@ -37,7 +37,8 @@ Cypress.Commands.add('visitAuthed', (path, opts={}) => {
 })
 
 Cypress.Commands.add('visitHSCHomepage', (lang = "en") => {
-  cy.visit(`/${lang}/shop/home`, getOpts())
+  cy.visit(`/${lang}/shop/home`, getOpts()) //?bt-env=itn01
+  
 })
 
 Cypress.Commands.add('visitExpressHomepage', (lang = "en") => {

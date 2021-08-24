@@ -1,3 +1,4 @@
+/*
 describe('Optik Channels FIFA', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
@@ -26,5 +27,6 @@ describe('Optik Channels FIFA', function() {
     cy.matchImageSnapshot("Optik Channels")//snapshots page for comparison
     })
 })
+*/
   
   

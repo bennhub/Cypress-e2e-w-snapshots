@@ -1,10 +1,15 @@
+describe('Test Bundle PDP', function() {
+  before(() => {
+    // purple survey banner
+    cy.setCookie(Cypress.env('SURVEY_COOKIE_NAME'), 'false');
+    // get a session token and qual with a FIFA address
+    cy.visitHSCHomepage()//Visit base url then qual compass
+      .fillCompassAddress()
+  })
 describe('Bundles_Compass', function() {
   it('Gets, types and visual tests', function() {
-    cy.visitHSCHomepage()//Visit base url 
-      .fillCompassAddress()//Qual Compass 
-      .visitHSCHomepage()//Back to base url (needed for running tests on wcpreview)
+    cy.visitHSCHomepage()//Back to base url (needed for running tests on wcpreview)
       .visit('/shop/home/product/essentials-int75?bundle') //Go to Bundles Optik 7-1 + Int 150 PDP
-      .setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )//set cookie to prevent purple banner pop up
       .wait(3000)
       .get('.StyledClickable-lxf9hd-0')//Opens T & C section
       .should('be.visible', { timeout: 5000 }).click()
@@ -13,5 +18,9 @@ describe('Bundles_Compass', function() {
       .wait(2000)
       .get('[data-qa=skip-channel').click()
       .wait(2000)
+      .visit('/commerce/cart') //Go to Cart
+      cy.get('[data-test-id="cart-item-internet"]',{ timeout: 60000 }).should('be.visible')//verify items on cart page)
+      cy.get('[data-test-id="cart-item-optikTV"]',{ timeout: 60000 }).should('be.visible')//verify items on cart page)
+    })
   })
 })

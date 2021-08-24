@@ -1,3 +1,4 @@
+/*
 describe('Pik Channels', function() {
   it('Gets, types and visual tests', function() {
     cy.visitHSCHomepage()//Visit base url then qual compass
@@ -23,4 +24,4 @@ describe('Pik Channels', function() {
     cy.matchImageSnapshot("Pik Channels");//snapshots page for comparison
   })
 })
-  
+  */
