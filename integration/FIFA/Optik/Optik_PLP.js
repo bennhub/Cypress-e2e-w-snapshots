@@ -1,27 +1,28 @@
-describe("Optik PLP FIFA", function () {
-  it("Gets, types and visual tests", function () {
-    //Visits Home and begins to qual
+// Describe block for the test suite
+describe("Optik PLP FIFA", () => {
+  // Test case for getting, typing, and visual tests
+  it("Gets, types and visual tests", () => {
+    // Visit Home and begin qualification
     cy.visit("/");
     cy.contains("Get started").click();
 
-    //Quals Compass address
+    // Qualify Compass address
     cy.get("#autocomplete-form-address-google").type(
       Cypress.env("address_FIFA")
     );
-
     cy.contains("Check availability").click().wait(7000);
 
-    //lands back on home page
-    //Go to internet plans
+    // Lands back on the home page
+    // Go to internet plans
     cy.get("[data-qa=button-optik]").click().wait(2000);
 
-    //sets cookie so purple banner does not apppear
+    // Set cookie to prevent purple banner from appearing
     cy.setCookie("QSI_SI_8II6mHwhblM7icZ_intercept", "true").wait(3000);
 
-    //Opens T & C section
+    // Open Terms & Conditions section
     cy.contains("View terms and conditions").click().wait(2000);
 
-    //snapshots page for comparison
+    // Snapshot page for comparison
     cy.matchImageSnapshot("Optik PLP");
   });
 });

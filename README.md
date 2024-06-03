@@ -1,5 +1,7 @@
 # cataAutomationE2E
 
+## Quick test to see how cypress Image Snapshot works
+
 **To Run Install Cypress and Cypress Image Snapshot**
 ----------------------------------------------------
 
