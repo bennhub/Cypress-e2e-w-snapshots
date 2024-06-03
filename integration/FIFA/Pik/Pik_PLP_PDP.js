@@ -1,103 +1,80 @@
-describe('Pik PLP PDP FIFA', function() {
-    it('Gets, types and visual tests', function() {
+describe("Pik PLP PDP FIFA", function () {
+  it("Gets, types and visual tests", function () {
+    //Visits Home and begins to qual
+    cy.visit("/");
+    cy.contains("Get started").click();
 
+    //Quals Compass address
+    cy.get("#autocomplete-form-address-google").type(
+      Cypress.env("address_FIFA")
+    );
 
-//Visits Home and begins to qual
-cy.visit('/')
-cy.contains('Get started').click()
+    cy.contains("Check availability").click().wait(7000);
 
-//Quals Compass address
-cy.get('#autocomplete-form-address-google')
-        .type(Cypress.env('address_FIFA'))
-  
-cy.contains('Check availability').click()
-.wait(7000) 
-   
-//lands back on home page
-//Go to Pik plans 
-cy.get('[data-qa=button-pik]').click()
-.wait(2000)
+    //lands back on home page
+    //Go to Pik plans
+    cy.get("[data-qa=button-pik]").click().wait(2000);
 
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
- 
-//Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
-.wait(4000)
-        
+    //sets cookie so purple banner does not apppear
+    cy.setCookie("QSI_SI_8II6mHwhblM7icZ_intercept", "true").wait(3000);
 
-//Opens T & C section
-/*cy
+    //Opens FAQ section
+    cy.contains("Frequently Asked Questions").click().wait(4000);
+
+    //Opens T & C section
+    /*cy
 .contains('View terms and conditions')
 .should('be.visible', { wait: 3000 })
 .click()*/
 
-//snapshots page for comparison
-cy.matchImageSnapshot("Pik PLP");
+    //snapshots page for comparison
+    cy.matchImageSnapshot("Pik PLP");
 
+    //visit basics + pik 5 PDP
+    cy.visit("/product/the-basics-pik-5-tvx");
 
-//visit basics + pik 5 PDP
-cy.visit('/product/the-basics-pik-5-tvx')
+    //sets cookie so purple banner does not apppear
+    cy.setCookie("QSI_SI_8II6mHwhblM7icZ_intercept", "true").wait(3000);
 
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
+    //Opens Details section
+    cy.contains("Details").click().wait(2000);
 
+    //Opens channels section
+    cy.contains("The basic channels").click().wait(2000);
 
-//Opens Details section
-cy.contains('Details').click()
-.wait(2000)
+    //Opens FAQ section
+    cy.contains("Frequently Asked Questions").click().wait(2000);
 
-//Opens channels section
-cy.contains('The basic channels').click()
-.wait(2000)         
+    //Opens T & C section
+    cy.contains("View terms and conditions")
+      .should("be.visible", { timeout: 5000 })
+      .click();
 
-//Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
-.wait(2000)
+    //snapshots page for comparison
+    //cy.compareSnapshot("Basics+5 PDP");
+    cy.matchImageSnapshot("Basics+5 PDP");
 
-//Opens T & C section
-cy
-.contains('View terms and conditions')
-.should('be.visible', { timeout: 5000 })
-.click() 
+    //visit basics + crave PDP
+    cy.visit("/product/the-basics-crave-tvx");
 
-//snapshots page for comparison
-//cy.compareSnapshot("Basics+5 PDP");
-cy.matchImageSnapshot("Basics+5 PDP");
+    //sets cookie so purple banner does not apppear
+    cy.setCookie("QSI_SI_8II6mHwhblM7icZ_intercept", "true").wait(3000);
 
+    //Opens Details section
+    cy.contains("Details").click().wait(2000);
 
-//visit basics + crave PDP
-cy.visit('/product/the-basics-crave-tvx')
+    //Opens channels section
+    cy.contains("The basic channels").click().wait(2000);
 
-//sets cookie so purple banner does not apppear 
-cy.setCookie('QSI_SI_8II6mHwhblM7icZ_intercept','true' )
-.wait(3000)
+    //Opens FAQ section
+    cy.contains("Frequently Asked Questions").click().wait(2000);
 
+    //Opens T & C section
+    cy.contains("View terms and conditions")
+      .should("be.visible", { timeout: 5000 })
+      .click();
 
-//Opens Details section
-cy.contains('Details').click()
-.wait(2000)
-
-//Opens channels section
-cy.contains('The basic channels').click()
-.wait(2000)         
-
-//Opens FAQ section
-cy.contains('Frequently Asked Questions').click()
-.wait(2000)
-
-//Opens T & C section
-cy
-.contains('View terms and conditions')
-.should('be.visible', { timeout: 5000 })
-.click() 
-
-//snapshots page for comparison
-cy.matchImageSnapshot("Basics+Crave PDP");
-
-
-    })
-  })
-  
+    //snapshots page for comparison
+    cy.matchImageSnapshot("Basics+Crave PDP");
+  });
+});
